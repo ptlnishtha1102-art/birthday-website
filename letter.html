@@ -1,0 +1,631 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>A Letter For My Sweetheart ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        body {
+
+            margin: 0;
+
+            min-height: 100vh;
+
+            font-family: Arial, sans-serif;
+
+            color: white;
+
+            background:
+
+                radial-gradient(
+                    circle at top left,
+                    #ff5fa2,
+                    transparent 30%
+                ),
+
+                radial-gradient(
+                    circle at bottom right,
+                    #7657ff,
+                    transparent 35%
+                ),
+
+                linear-gradient(
+                    135deg,
+                    #724694,
+                    #6b1c79,
+                    #5a1759
+                );
+
+            background-attachment: fixed;
+
+        }
+
+
+        /* PAGE */
+
+        .page {
+
+            min-height: 100vh;
+
+            padding: 70px 20px;
+
+            text-align: center;
+
+        }
+
+
+        /* TOP TEXT */
+
+        .small {
+
+            color: #ffc5e5;
+
+            letter-spacing: 3px;
+
+            text-transform: uppercase;
+
+            font-size: 13px;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        /* TITLE */
+
+        h1 {
+
+            font-size:
+                clamp(45px, 8vw, 80px);
+
+            margin: 10px 0 35px;
+
+            background:
+
+                linear-gradient(
+                    90deg,
+                    #ff9fd2,
+                    #ffffff,
+                    #ffb9df
+                );
+
+            -webkit-background-clip: text;
+
+            color: transparent;
+
+        }
+
+
+        /* =========================
+           THREE IMAGES
+        ========================== */
+
+        .photo-gallery {
+
+            max-width: 900px;
+
+            margin: 0 auto 35px;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 20px;
+
+        }
+
+
+        .photo-gallery img {
+
+            width: 100%;
+
+            aspect-ratio: 1 / 1;
+
+            object-fit: cover;
+
+            border-radius: 18px;
+
+            display: block;
+
+            border:
+                3px solid
+                rgba(255,255,255,0.35);
+
+            box-shadow:
+                0 12px 30px
+                rgba(0,0,0,0.35);
+
+            transition: 0.4s;
+
+        }
+
+
+        .photo-gallery img:hover {
+
+            transform: scale(1.05);
+
+            box-shadow:
+                0 15px 40px
+                rgba(237, 119, 178, 0.5);
+
+        }
+
+
+        /* =========================
+           AUDIO
+        ========================== */
+
+        .letter-music {
+
+            max-width: 500px;
+
+            margin: 0 auto 35px;
+
+            padding: 15px;
+
+            border-radius: 20px;
+
+            background:
+                rgba(255,255,255,0.10);
+
+            border:
+                1px solid
+                rgba(255,255,255,0.25);
+
+            backdrop-filter: blur(10px);
+
+        }
+
+
+        .letter-music p {
+
+            margin: 0 0 10px;
+
+            color: #ffc5e5;
+
+            font-weight: bold;
+
+            text-align: center;
+
+        }
+
+
+        .letter-music audio {
+
+            width: 100%;
+
+        }
+
+
+        /* =========================
+           LETTER BOX
+        ========================== */
+
+        .letter {
+
+            max-width: 750px;
+
+            margin: auto;
+
+            padding: 45px;
+
+            text-align: left;
+
+            border-radius: 30px;
+
+            background:
+                rgba(255,255,255,0.10);
+
+            border:
+                1px solid
+                rgba(255,255,255,0.25);
+
+            backdrop-filter: blur(18px);
+
+            box-shadow:
+                0 25px 70px
+                rgba(0,0,0,0.35);
+
+        }
+
+
+        /* LETTER TEXT */
+
+        .letter p {
+
+            font-size: 17px;
+
+            line-height: 1.9;
+
+            color: #f8e4f1;
+
+            margin-bottom: 22px;
+
+        }
+
+
+        .letter .greeting {
+
+            font-size: 21px;
+
+            color: #ffc5e5;
+
+            font-weight: bold;
+
+        }
+
+
+        /* SPECIAL QUOTE */
+
+        .highlight {
+
+            text-align: center;
+
+            font-size: 21px !important;
+
+            font-weight: bold;
+
+            color: #ffb8df !important;
+
+            padding: 20px;
+
+            border-top:
+                1px solid
+                rgba(255,255,255,0.2);
+
+            border-bottom:
+                1px solid
+                rgba(255,255,255,0.2);
+
+        }
+
+
+        /* SIGNATURE */
+
+        .signature {
+
+            text-align: right;
+
+            color: #ffc5e5 !important;
+
+        }
+
+
+        /* BUTTONS */
+
+        .buttons {
+
+            margin-top: 35px;
+
+            text-align: center;
+
+        }
+
+
+        .btn {
+
+            display: inline-block;
+
+            padding: 14px 28px;
+
+            margin: 8px;
+
+            border-radius: 40px;
+
+            text-decoration: none;
+
+            color: white;
+
+            font-weight: bold;
+
+            background:
+
+                linear-gradient(
+                    135deg,
+                    #de76a8,
+                    #7662ad
+                );
+
+            box-shadow:
+
+                0 10px 30px
+                rgba(255,79,163,0.3);
+
+            transition: 0.3s;
+
+        }
+
+
+        .btn:hover {
+
+            transform:
+                translateY(-5px)
+                scale(1.04);
+
+            box-shadow:
+
+                0 15px 40px
+                rgba(255,79,163,0.6);
+
+        }
+
+
+        /* MOBILE */
+
+        @media(max-width:600px) {
+
+            .page {
+
+                padding: 50px 15px;
+
+            }
+
+
+            /* Keep 3 photos in one row */
+
+            .photo-gallery {
+
+                grid-template-columns:
+                    repeat(3, 1fr);
+
+                gap: 8px;
+
+            }
+
+
+            .photo-gallery img {
+
+                border-radius: 10px;
+
+                border-width: 2px;
+
+            }
+
+
+            .letter {
+
+                padding: 28px 22px;
+
+            }
+
+
+            .letter p {
+
+                font-size: 16px;
+
+                line-height: 1.8;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<div class="page">
+
+
+    <!-- TOP -->
+
+    <p class="small">
+
+        A little message from my heart... 💕
+
+    </p>
+
+
+    <h2>
+
+        To My Forever Chapter ❤️
+
+    </h2>
+
+
+    <!-- =========================
+         THREE PHOTOS IN ONE ROW
+    ========================== -->
+
+    <div class="photo-gallery">
+
+
+        <img
+            src="c:\Users\Patel Nishtha\Downloads\WhatsApp Image 2026-10-01 at 7.45.32 PM.jpeg"
+            alt="Our Memory 1">
+
+
+        <img
+            src="c:\Users\Patel Nishtha\Downloads\WhatsApp Image 2026-10-01 at 8.22.06 PM.jpeg"
+            alt="Our Memory 2">
+
+
+        <img
+            src="c:\Users\Patel Nishtha\Downloads\WhatsApp Image 2026-10-01 at 8.22.07 PM.jpeg"
+            alt="Our Memory 3">
+
+
+    </div>
+
+
+    <!-- =========================
+         AUDIO
+    ========================== -->
+
+    <div class="letter-music">
+
+        <p>
+
+            🎵 A Little Song For You ❤️
+
+        </p>
+
+
+        <audio controls loop>
+
+            <source
+                src="c:\Users\Patel Nishtha\Downloads\WhatsApp Audio 2026-10-02 at 12.07.32 PM.mp4"
+                type="audio/mpeg">
+
+            Your browser does not support audio.
+
+        </audio>
+
+    </div>
+
+
+    <!-- LETTER -->
+
+    <div class="letter">
+
+
+        <p class="greeting">
+
+            For The Ones Who Stay, ❤️
+
+        </p>
+
+
+        <p>
+
+            Happy Birthday to one of the most
+            special people in my life! 🎂✨
+
+        </p>
+
+
+        <p>
+
+            Even though we're miles apart,
+            I hope you know that you're never
+            really far from me.
+
+            Every memory, every laugh,
+            every crazy conversation and
+            every little moment means
+            more to me than you know.
+
+        </p>
+
+
+        <p>
+
+            I wish I could be there today
+            to celebrate your birthday,
+            give you the biggest hug,
+            and tell you in person how much
+            our friendship means to me.
+
+        </p>
+
+
+        <p>
+
+            Until we meet again, keep smiling,
+            keep dreaming, and keep being
+            the amazing person you are. ✨
+
+        </p>
+
+
+        <p>
+
+            May this new year of your life
+            bring you happiness, success,
+            love and countless beautiful
+            memories.
+
+        </p>
+
+
+        <!-- SPECIAL MESSAGE -->
+
+        <p class="highlight">
+
+            "Distance is only between two places,
+            never between two hearts." ❤️
+
+        </p>
+
+
+        <p>
+
+            Happy Birthday once again! 🥳🎂
+
+            <br><br>
+
+            I hope this little website reminds
+            you that no matter how far away
+            we are, you will always have a
+            special place in my heart.
+
+        </p>
+
+
+        <p class="signature">
+
+            With lots of love,<br>
+
+            <strong>
+                Your Special Ones ❤️
+            </strong>
+
+        </p>
+
+
+    </div>
+
+
+    <!-- NAVIGATION -->
+
+    <div class="buttons">
+
+
+        <a
+            href="index.html"
+            class="btn">
+
+            🏠 Home
+
+        </a>
+
+
+        <a
+            href="memories.html"
+            class="btn">
+
+            📸 Memories
+
+        </a>
+
+
+    </div>
+
+
+</div>
+
+
+</body>
+
+</html>
+```

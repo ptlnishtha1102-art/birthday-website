@@ -1,0 +1,413 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Birthday My Realone ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            color: white;
+
+            background:
+                radial-gradient(
+                    circle at top left,
+                    #be4f7d,
+                    transparent 30%
+                ),
+
+                radial-gradient(
+                    circle at bottom right,
+                    #654bda,
+                    transparent 35%
+                ),
+
+                linear-gradient(
+                    135deg,
+                    #ca91e6,
+                    #1c0aa9,
+                    #6b85ec
+                );
+        }
+
+
+        /* MUSIC */
+
+        .music {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 100;
+        }
+
+        .music button {
+            border: none;
+            padding: 12px 20px;
+            border-radius: 30px;
+
+            background: white;
+            color: #9ac6f3;
+
+            font-weight: bold;
+            cursor: pointer;
+
+            box-shadow:
+                0 8px 25px rgba(0,0,0,0.3);
+        }
+
+
+        /* CENTER */
+
+        .hero {
+            min-height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+
+            padding: 25px;
+        }
+
+
+        /* BOX */
+
+        .content {
+
+            width: 100%;
+            max-width: 750px;
+
+            padding: 55px 45px;
+
+            border-radius: 35px;
+
+            background:
+                rgba(255,255,255,0.10);
+
+            border:
+                1px solid rgba(255,255,255,0.25);
+
+            backdrop-filter: blur(18px);
+
+            box-shadow:
+                0 30px 80px rgba(0,0,0,0.4);
+        }
+
+
+        /* CAKE */
+
+        .emoji {
+            font-size: 70px;
+
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-12px);
+            }
+        }
+
+
+        /* SMALL TEXT */
+
+        .small {
+
+            color: #ffc5e5;
+
+            letter-spacing: 3px;
+
+            text-transform: uppercase;
+
+            font-size: 13px;
+
+            margin: 20px 0;
+        }
+
+
+        /* TITLE */
+
+        h1 {
+
+            font-size:
+                clamp(55px, 10vw, 100px);
+
+            margin: 10px 0;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #fe9acf,
+                    #ec8f8f,
+                    #d6529b
+                );
+
+            -webkit-background-clip: text;
+
+            color: transparent;
+        }
+
+
+        h2 {
+
+            font-size:
+                clamp(28px, 5vw, 45px);
+
+            margin: 15px 0 25px;
+        }
+
+
+        /* MESSAGE */
+
+        .message {
+
+            max-width: 600px;
+
+            margin: auto;
+
+            font-size: 18px;
+
+            line-height: 1.8;
+
+            color: #f7dced;
+        }
+
+
+        /* PAGE LINKS */
+
+        .links {
+
+            margin-top: 35px;
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 18px;
+
+            flex-wrap: wrap;
+        }
+
+
+        /* BUTTON */
+
+        .btn {
+
+            display: inline-block;
+
+            padding: 15px 28px;
+
+            border-radius: 40px;
+
+            text-decoration: none;
+
+            color: white;
+
+            font-weight: bold;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #ee4e9b,
+                    #6f42eb
+                );
+
+            box-shadow:
+                0 10px 30px
+                rgba(254, 67, 158, 0.3);
+
+            transition: 0.3s;
+        }
+
+
+        .btn:hover {
+
+            transform:
+                translateY(-5px)
+                scale(1.05);
+
+            box-shadow:
+                0 15px 40px
+                rgba(255,79,163,0.6);
+        }
+
+
+        /* MOBILE */
+
+        @media(max-width:600px) {
+
+            .content {
+                padding: 40px 20px;
+            }
+
+            .links {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .music {
+                top: 10px;
+                right: 10px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- MUSIC -->
+
+<div class="music">
+
+    <button onclick="playMusic()">
+        🎵 Play Music
+    </button>
+
+    <audio id="song" loop>
+
+        <source
+            src="c:\Users\Patel Nishtha\Downloads\WhatsApp Audio 2026-10-02 at 12.34.14 PM.mp4"
+            type="audio/mpeg">
+
+    </audio>
+
+</div>
+
+
+<!-- MAIN PAGE -->
+
+<section class="hero">
+
+    <div class="content">
+
+
+        <div class="emoji">
+            🎂✨
+        </div>
+
+
+        <p class="small">
+            To my favorite person, miles away...
+        </p>
+
+
+        <h1>
+            Happy Birthday
+        </h1>
+
+
+        <h2>
+            My Realone ❤️
+        </h2>
+
+
+        <p class="message">
+
+            Distance may keep us apart,
+            but it can never change the place
+            you have in my heart.
+
+            <br><br>
+
+            I miss you more than words can say,
+            and I can't wait for the day
+            we're together again,
+            laughing over the dumbest things
+            like we always do. 🥹❤️
+
+            <br><br>
+
+            You came into my life as a friend, 
+            but somewhere along the way, you became family
+            Distance has taught me that missing someone 
+            is just another way of realizing how important they are.
+
+            <br><br>
+
+            We spent so many years in the same school, 
+            walking through the same corridors, sitting together, 
+            laughing at the smallest things, and turning ordinary 
+            school days into memories I'll never forget. 
+            Now we're in different colleges, meeting different people and living different lives, 
+            and honestly, I miss having you just a few minutes away. 
+            Sometimes I wish I could go back to those school days 
+            when seeing you was just part of my everyday routine. 
+            Life changed our places, but it never changed our friendship. 
+            No matter how different our colleges or our paths become, 
+            you'll always be the girl who made my school years a little brighter 
+            and my memories a lot more special. ❤️
+
+
+        </p>
+
+
+        <!-- CLICKABLE PAGE LINKS -->
+
+        <div class="links">
+
+
+            <!-- GOES TO MEMORIES PAGE -->
+
+            <a
+                href="memories.html"
+                class="btn">
+
+                📸 Our Memories
+
+            </a>
+
+
+            <!-- GOES TO LETTER PAGE -->
+
+            <a
+                href="letter.html"
+                class="btn">
+
+                💌 My Letter
+
+            </a>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
+```

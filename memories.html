@@ -1,0 +1,500 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Our Beautiful Memories ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        /* BEAUTIFUL BACKGROUND */
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+
+            background:
+                linear-gradient(
+                    rgba(40, 11, 51, 0.78),
+                    rgba(101, 28, 101, 0.82)
+                ),
+                url("https://www.bing.com/ck/a?!&&p=6bbab7f8693298ddfcfe6420d5c0ae99bb077391b04362f9bd9f53cdb4dbd03fJmltdHM9MTc5MDgxMjgwMA&ptn=3&ver=2&hsh=4&fclid=08c741b1-b2f0-678c-1f5c-5569b3426624&u=a1L2ltYWdlcy9jcmVhdGUvYWktaW1hZ2UtZ2VuZXJhdG9yL3NvZnQtZ2xvdy1saWdodC1iYWNrZ3JvdW5kLXBhc3RlbHMvMS0xYWFlYzRiOTAyMmI0YWVhOTMwYmM3NzE1MjQ1Y2YwZT9GT1JNPUdFTkNSRSZzZXJwY3VzdD0xJnRoSWQ9T0lHUC5nVDg4RjNwcHlpeXUuU3Fwd1ZoQSZxPWxpZ2h0JTIwYmFja2dyb3VuZCUyMGltZw");
+
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+
+            color: white;
+        }
+
+
+        /* MAIN PAGE */
+
+        .page {
+            min-height: 100vh;
+            padding: 70px 40px;
+            text-align: center;
+        }
+
+
+        .small {
+            color: #ffc8e8;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+
+        h1 {
+            font-size: 55px;
+            margin: 10px 0;
+
+            background: linear-gradient(
+                90deg,
+                #ffb6df,
+                #ffffff,
+                #ffc3e6
+            );
+
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+
+        .subtitle {
+            color: #f8dff0;
+            font-size: 18px;
+            margin-bottom: 50px;
+        }
+
+
+        /* =========================
+           AUDIO - ADDED ONLY
+        ========================== */
+
+        .memory-audio {
+
+            width: 100%;
+            max-width: 500px;
+
+            margin: -20px auto 40px;
+
+            padding: 15px 20px;
+
+            border-radius: 25px;
+
+            background: rgba(255,255,255,0.10);
+
+            border: 1px solid rgba(255,255,255,0.25);
+
+            backdrop-filter: blur(10px);
+
+            box-shadow:
+                0 10px 30px rgba(0,0,0,0.25);
+
+        }
+
+        .memory-audio p {
+
+            margin: 0 0 10px;
+
+            color: #ffc8e8;
+
+            font-weight: bold;
+
+            font-size: 15px;
+
+        }
+
+        .memory-audio audio {
+
+            width: 100%;
+
+        }
+
+
+        /* PHOTO GRID */
+
+        .gallery {
+
+            max-width: 1200px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 30px;
+
+        }
+
+
+        /* PHOTO CARD */
+
+        .photo {
+
+            height: 380px;
+
+            border-radius: 25px;
+
+            overflow: hidden;
+
+            background: rgba(255, 255, 255, 0.12);
+
+            padding: 8px;
+
+            border: 1px solid rgba(255,255,255,0.3);
+
+            box-shadow:
+                0 15px 40px rgba(0,0,0,0.35);
+
+            backdrop-filter: blur(10px);
+
+            transition: all 0.4s ease;
+
+        }
+
+
+        /* PHOTO */
+
+        .photo img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+            border-radius: 18px;
+
+            display: block;
+
+            transition: transform 0.5s ease;
+
+        }
+
+
+        /* HOVER EFFECT */
+
+        .photo:hover {
+
+            transform: translateY(-10px);
+
+            box-shadow:
+                0 25px 50px rgba(251, 104, 190, 0.35);
+
+        }
+
+
+        .photo:hover img {
+
+            transform: scale(1.07);
+
+        }
+
+
+        /* MEMORY TEXT */
+
+        .memory-text {
+
+            max-width: 750px;
+
+            margin: 55px auto 35px;
+
+            font-size: 19px;
+
+            line-height: 1.8;
+
+            color: #ffe8f6;
+
+        }
+
+
+        /* BUTTONS */
+
+        .buttons {
+
+            margin-top: 30px;
+
+        }
+
+
+        .btn {
+
+            display: inline-block;
+
+            margin: 8px;
+
+            padding: 15px 28px;
+
+            border-radius: 40px;
+
+            text-decoration: none;
+
+            color: white;
+
+            font-weight: bold;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #ff4fa3,
+                    #8d63ff
+                );
+
+            box-shadow:
+                0 10px 30px rgba(255,79,163,0.3);
+
+            transition: 0.3s;
+
+        }
+
+
+        .btn:hover {
+
+            transform: translateY(-5px);
+
+            box-shadow:
+                0 15px 40px rgba(255,79,163,0.5);
+
+        }
+
+
+        /* MOBILE */
+
+        @media(max-width: 900px) {
+
+            .gallery {
+
+                grid-template-columns: repeat(2, 1fr);
+
+            }
+
+        }
+
+
+        @media(max-width: 600px) {
+
+            .page {
+
+                padding: 50px 20px;
+
+            }
+
+            h1 {
+
+                font-size: 38px;
+
+            }
+
+            .gallery {
+
+                grid-template-columns: 1fr;
+
+            }
+
+            .photo {
+
+                height: 400px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<div class="page">
+
+
+    <p class="small">
+        Every picture has a story... ✨
+    </p>
+
+
+    <h2>
+        Our Beautiful Memories 📸
+    </h2>
+
+
+    <p class="subtitle">
+        Different places. Different moments.
+        One beautiful friendship. ❤️
+    </p>
+
+
+    <!-- =========================
+         AUDIO - ADDED ONLY
+    ========================== -->
+
+    <div class="memory-audio">
+
+        <p>
+            🎵 A Song For Our Memories ❤️
+        </p>
+
+        <audio controls loop>
+
+            <source
+                src="c:\Users\Patel Nishtha\Downloads\WhatsApp Audio 2026-10-02 at 11.57.44 AM.mp4"
+                type="audio/mpeg">
+
+            Your browser does not support audio.
+
+        </audio>
+
+    </div>
+
+
+    <!-- 3 TOP + 3 BOTTOM -->
+
+    <div class="gallery">
+
+
+        <!-- TOP ROW -->
+
+        <div class="photo">
+            <img
+                src="c:\Users\Patel Nishtha\Downloads\WhatsApp Image 2026-10-01 at 6.54.57 PM.jpeg"
+                alt="Our beautiful memory">
+        </div>
+
+
+        <div class="photo">
+            <img
+                src="c:\Users\Patel Nishtha\Downloads\WhatsApp Image 2026-10-01 at 6.54.57 PM (1).jpeg"
+                alt="Our beautiful memory">
+        </div>
+
+
+        <div class="photo">
+            <img
+                src="c:\Users\Patel Nishtha\Downloads\WhatsApp Image 2026-10-01 at 6.54.57 PM (2).jpeg"
+                alt="Our beautiful memory">
+        </div>
+
+
+        <!-- BOTTOM ROW -->
+
+        <div class="photo">
+            <img
+                src="c:\Users\Patel Nishtha\Downloads\WhatsApp Image 2026-10-01 at 6.54.57 PM (3).jpeg"
+                alt="Our beautiful memory">
+        </div>
+
+
+        <div class="photo">
+            <img
+                src="c:\Users\Patel Nishtha\Downloads\WhatsApp Image 2026-10-01 at 7.01.51 PM.jpeg"
+                alt="Our beautiful memory">
+        </div>
+
+
+        <div class="photo">
+            <img
+                src="c:\Users\Patel Nishtha\Downloads\WhatsApp Image 2026-10-01 at 7.05.49 PM.jpeg"
+                alt="Our beautiful memory">
+        </div>
+
+        <div class="photo">
+            <img
+                src="c:\Users\Patel Nishtha\Downloads\WhatsApp Image 2026-10-02 at 12.10.56 PM.jpeg"
+                alt="Our beautiful memory">
+        </div>
+        
+        <div class="photo">
+            <img
+                src="c:\Users\Patel Nishtha\Downloads\WhatsApp Image 2026-10-02 at 12.10.56 PM (1).jpeg"
+                alt="Our beautiful memory">
+        </div>
+
+        <div class="photo">
+            <img
+                src="c:\Users\Patel Nishtha\Downloads\WhatsApp Image 2026-10-02 at 12.14.07 PM.jpeg"
+                alt="Our beautiful memory">
+        </div>
+
+    </div>
+
+
+    <p class="memory-text">
+
+        I wish I could be there today,
+        celebrating beside you, laughing with you,
+        and making another unforgettable memory.
+        Some friendships don't need daily conversations
+        to stay strong; they simply live in the heart.
+        🥹❤️
+
+        <br><br>
+
+        Even though we're miles apart,
+        these memories remind me that
+        distance can never change our friendship. ✨
+
+        <br><br>
+
+        “If I could turn every mile between us into a step, 
+        I'd already be standing beside you. Until then, 
+        I'll keep every memory close, celebrate you from afar, 
+        and wait for the day we can laugh together again. 
+        Happy Birthday, my forever girl. ❤️🎂”
+
+        <br><br>
+
+        “Some people stay close to your heart, even when they’re far from your side.”
+
+        <br><br>
+        
+        Being miles away from you is never easy, 
+        especially on days when all I want is to be beside you, 
+        laughing over the stupidest things, sharing our little moments, 
+        and giving you the biggest hug. 
+        But distance has taught me that true friendship isn't measured
+        by how often we meet or how close we live—it’s measured by how deeply we care,
+        how naturally we understand each other, and how we always find our way back to one another. 
+        No matter how many miles are between us, you will always be one of the closest people to my heart. 
+        I miss you, I cherish every memory we've made, and I can't wait for the day when this distance is finally just a memory. 
+        Until then, remember that you have a best friend who is always cheering for you, thinking of you, 
+        and loving our friendship from miles away. ❤️🥹✨
+
+
+
+    </p>
+
+
+    <div class="buttons">
+
+
+        <a href="index.html" class="btn">
+            ← Back
+        </a>
+
+
+        <a href="letter.html" class="btn">
+            Read My Letter 💌 →
+        </a>
+
+
+    </div>
+
+
+</div>
+
+
+</body>
+</html>
+```
